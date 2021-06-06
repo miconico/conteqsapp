@@ -1,0 +1,10 @@
+<div *ngIf="trafficSensor">
+
+    <h2>{{trafficSensor.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{trafficSensor.id}}</div>
+    <div>
+      <label for="trafficSensor-name">Sensor name: </label>
+      <input id="trafficSensor-name" [(ngModel)]="trafficSensor.name" placeholder="name">
+    </div>
+  
+  </div>

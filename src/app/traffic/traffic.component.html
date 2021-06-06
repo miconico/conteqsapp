@@ -1,0 +1,10 @@
+<h2>TrafficSensors</h2>
+<ul class="traffic">
+  <li *ngFor="let trafficSensor of trafficSensors"
+    [class.selected]="trafficSensor === selectedSensor"
+    (click)="onSelect(trafficSensor)">
+    <span class="badge">{{trafficSensor.id}}</span> {{trafficSensor.name}}
+  </li>
+</ul>
+
+<app-traffic-detail [trafficSensor]="selectedSensor"></app-traffic-detail>
